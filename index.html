@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Undangan Canva Pro - Gratis!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Background Shapes -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="attached_assets/canva.png" alt="Canva Logo" class="header-logo-img">
+                <span>Canva Pro Links</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Dapatkan Akses <span class="gradient-text">Canva Pro</span> Gratis!</h1>
+                <p class="subtitle">Bergabunglah dengan tim Canva Pro secara gratis. Nikmati fitur premium tanpa biaya
+                    dengan link undangan eksklusif kami.</p>
+                <div class="counter-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span id="linkCount">0</span> Link Aktif Tersedia
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Grid -->
+        <section class="links-section">
+            <div class="container">
+                <div class="links-grid" id="linksContainer">
+                    <!-- Links will be injected here by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="info-section">
+            <div class="container">
+                <h2 class="section-title">Cara Bergabung</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-bg"></div>
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h3 class="step-title">1. Pilih Link</h3>
+                        <p class="step-desc">Pilih salah satu link undangan yang tersedia di daftar atas.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-bg"></div>
+                            <i class="fas fa-copy"></i>
+                        </div>
+                        <h3 class="step-title">2. Copy Link</h3>
+                        <p class="step-desc">Salin link ke clipboard atau klik tombol "Buka" langsung.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon-wrapper">
+                            <div class="step-icon-bg"></div>
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h3 class="step-title">3. Bergabung</h3>
+                        <p class="step-desc">Login ke akun Canva Anda dan terima undangan tim.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Hubungi Admin</h2>
+                <div class="contact-container">
+                    <div class="contact-form-wrapper">
+                        <form action="https://formsubmit.co/f93ff4a87b9c3c34dbf3184553d646d3" method="POST"
+                            class="contact-form" id="contactForm">
+                            <!-- FormSubmit Configuration -->
+                            <!-- Captcha enabled by default -->
+                            <input type="hidden" name="_subject" value="Laporan Link Canva Pro">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+
+
+                            <div class="form-group">
+                                <label for="name">Nama</label>
+                                <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="topic">Topik</label>
+                                <select id="topic" name="topic" required>
+                                    <option value="" disabled selected>Pilih Topik</option>
+                                    <option value="Link Penuh">Link Sudah Penuh</option>
+                                    <option value="Link Expired">Link Kadaluarsa</option>
+                                    <option value="Request Link">Request Link Baru</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Canva Pro Links. Dibuat dengan <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Link berhasil disalin!</span>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-content">
+                <div class="popup-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <h2>Selamat Datang!</h2>
+                <p>Support kami dengan subscribe channel YouTube untuk update link Canva Pro terbaru.</p>
+                <a href="https://youtube.com/@fredyyr.5265?si=5ZRuF-mMcc8kM-8e" target="_blank" class="btn-subscribe"
+                    id="subscribeBtn">
+                    <i class="fab fa-youtube"></i>
+                    Subscribe Channel
+                </a>
+                <button class="btn-later" id="laterBtn">Nanti Saja</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Popup -->
+    <div class="popup-overlay" id="thankYouPopup">
+        <div class="popup-container">
+            <button class="popup-close" id="thankYouClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-content">
+                <div class="popup-icon" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Terima Kasih!</h2>
+                <p>Pesan Anda telah berhasil dikirim. Kami akan segera merespons secepat mungkin.</p>
+                <button class="btn-primary btn-block" id="thankYouOkBtn">Oke, Mengerti</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
